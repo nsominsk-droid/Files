@@ -1,0 +1,22 @@
+name = "saved-cloud-api"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "saved-cloud"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[vars]
+# Telegram ID владельца (узнать у @userinfobot). Несколько через запятую.
+ALLOWED_USER_IDS = "123456789"
+# ID приватного канала-хранилища, вида -1001234567890
+CHANNEL_ID = "-1001234567890"
+# Адрес Mini App на GitHub Pages (для кнопки в чате с ботом)
+WEBAPP_URL = "https://YOUR_NAME.github.io/YOUR_REPO/"
+# Origin фронтенда для CORS, например https://YOUR_NAME.github.io
+ALLOWED_ORIGIN = "*"
+
+# Секреты задаются командами:
+#   npx wrangler secret put BOT_TOKEN
+#   npx wrangler secret put WEBHOOK_SECRET
