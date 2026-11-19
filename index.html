@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+  <title>Saved Cloud</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="top-row">
+      <div class="title-wrap">
+        <button id="backBtn" class="icon-btn" hidden aria-label="Назад">‹</button>
+        <h1 id="title">Мои файлы</h1>
+      </div>
+      <span class="badge" id="modeBadge"></span>
+    </div>
+    <nav class="crumbs" id="crumbs"></nav>
+    <input id="search" class="search" type="search" placeholder="Поиск по названию…" autocomplete="off" />
+    <div class="toolbar">
+      <button class="chip" id="sortBtn"></button>
+      <button class="chip" id="selectBtn">Выбрать</button>
+      <button class="chip" id="trashBtn">Корзина</button>
+    </div>
+  </header>
+
+  <main class="container" id="content"></main>
+  <div class="bottom-bar" id="bottomBar"></div>
+
+  <div class="backdrop" id="backdrop"><div class="sheet" id="sheet"></div></div>
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
